@@ -23,7 +23,7 @@ jobs:
         - name: commit linting check
           uses: uptownaravi/verify-commit-message-action@v2
           with:
-            regex: '^(?=.{0,72}$)(vim-patch.*|(fix|feat|docs|test|perf|refactor|chore|build)(\([^)]+\))?!?:\s[a-z].*[^.]$)'
+            regex: '^(?=.{0,72}$)(vim-patch.*|(ci|fix|feat|docs|test|perf|refactor|chore|build)(\([^)]+\))?!?:\s[a-z].*[^.]$)'
 
         - name: setup jdk 17
           uses: actions/setup-java@v3
