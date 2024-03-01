@@ -1,6 +1,9 @@
 FROM openjdk:17-jdk-slim
+
 WORKDIR /app
 
-ADD target/*.jar app.jar
+ADD target/docker-k8s-learning-0.0.1-SNAPSHOT.jar /app/springapi-docker.jar
 
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "springapi-docker.jar"]
